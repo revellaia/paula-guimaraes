@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paula Guimarães · Fotografia · Araguaína-TO</title>
+<meta name="description" content="Paula Guimarães Studio · Fotografia autoral em Araguaína-TO. Retrato, gestante, newborn, acompanhamento infantil, família, editorial e casamentos. Há um instante que só acontece uma vez. Eu existo para guardá-lo.">
+<meta name="author" content="Paula Guimarães">
+<meta name="theme-color" content="#14100E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Paula Guimarães · Fotografia">
+<meta property="og:description" content="Fotografia autoral em Araguaína-TO. Retratos que revelam quem você é, com luz, presença e verdade.">
+<meta property="og:image" content="https://revellaia.github.io/paula-guimaraes/assets/paula-camera-web.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Paula Guimarães · Fotografia">
+<meta name="twitter:description" content="Fotografia autoral em Araguaína-TO. Luz, presença & verdade.">
+<meta name="twitter:image" content="https://revellaia.github.io/paula-guimaraes/assets/paula-camera-web.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314100E'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23C9A24B' stroke-width='2'/%3E%3Ctext x='32' y='41' font-family='Georgia,serif' font-size='24' fill='%23D9BE86' text-anchor='middle'%3EPG%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Paula Guimarães Studio","image":"https://revellaia.github.io/paula-guimaraes/assets/paula-camera-web.jpg","description":"Fotografia autoral: retrato, gestante, newborn, acompanhamento infantil, família, editorial e casamentos.","url":"https://revellaia.github.io/paula-guimaraes/","telephone":"+55-63-99971-9869","email":"paulag.fotografia@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Rua Rodoviária, 201, Centro","addressLocality":"Araguaína","addressRegion":"TO","addressCountry":"BR"},"founder":{"@type":"Person","name":"Paula Guimarães","jobTitle":"Fotógrafa"},"sameAs":["https://www.instagram.com/paulaguimaraes.fotografias"]}
+</script>
+<script>document.documentElement.className += ' reveal-ready';</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{ margin:0; background:#14100E; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+  ::selection{ background:#7E2233; color:#EFE6D8; }
+  a{ color:inherit; }
+  .pg-grain{ position:fixed; inset:0; z-index:8; pointer-events:none; opacity:.07; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+  /* render de carregamento: estado inicial pre-paint (sem flash de conteudo) */
+  html.reveal-ready [data-reveal]{ opacity:0; transform:translateY(26px); }
+
+  @keyframes pgBreathe{ 0%{ transform:scale(1.012); } 100%{ transform:scale(1.075); } }
+  @keyframes pgDrift{ 0%{ transform:translateY(0); } 100%{ transform:translateY(-14px); } }
+  @keyframes pgBlink{ 0%,100%{ opacity:1; } 50%{ opacity:.12; } }
+
+  /* ===== LENS-IRIS INTRO ===== */
+  @keyframes pgIris{
+    0%,16%{ clip-path:circle(6.5% at 26% 33%); }
+    100%{ clip-path:circle(150% at 50% 42%); }
+  }
+  @keyframes pgZoom{
+    0%,16%{ transform:scale(2.45); }
+    100%{ transform:scale(1); }
+  }
+  @keyframes pgRing{
+    0%,16%{ width:15vmin; height:15vmin; opacity:1; border-width:2px; }
+    70%{ opacity:.35; }
+    100%{ width:230vmin; height:230vmin; opacity:0; border-width:1px; }
+  }
+  @keyframes pgChromeOut{ 0%,46%{ opacity:1; } 78%,100%{ opacity:0; } }
+  @keyframes pgIntroFade{ 0%,82%{ opacity:1; } 100%{ opacity:0; } }
+  #pgIntro{ position:fixed; inset:0; z-index:120; background:#0C0908; overflow:hidden; animation:pgIntroFade 3.4s cubic-bezier(.7,0,.2,1) forwards; }
+  #pgIntro .iris{ position:absolute; inset:0; clip-path:circle(6.5% at 26% 33%); animation:pgIris 3s cubic-bezier(.66,0,.2,1) forwards; }
+  #pgIntro .iris img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:30% 30%; transform-origin:26% 33%; animation:pgZoom 3s cubic-bezier(.66,0,.2,1) forwards; filter:saturate(1.05) contrast(1.04); }
+  #pgIntro .ring{ position:absolute; left:26%; top:33%; transform:translate(-50%,-50%); border:2px solid rgba(201,162,75,.85); border-radius:50%; box-shadow:0 0 40px rgba(201,162,75,.25); animation:pgRing 3s cubic-bezier(.66,0,.2,1) forwards; }
+  #pgIntro .chrome{ position:absolute; inset:0; pointer-events:none; animation:pgChromeOut 3s ease forwards; }
+
+  /* ===== Botoes (hover) ===== */
+  .pg-btn-wine{ background:#7E2233; color:#EFE6D8; transition:transform .3s ease, background .3s ease; }
+  .pg-btn-wine:hover{ transform:translateY(-2px); background:#9B3A48; }
+  .pg-btn-ghost{ transition:background .3s ease; }
+  .pg-btn-ghost:hover{ background:rgba(239,230,216,0.06); }
+  .pg-navlink{ position:relative; }
+  .pg-navlink::after{ content:""; position:absolute; left:0; bottom:-4px; width:0; height:1px; background:#C9A24B; transition:width .35s cubic-bezier(.16,.7,.3,1); }
+  .pg-navlink:hover::after{ width:100%; }
+
+  /* ===== Galeria hover ===== */
+  .pg-gal-img{ transition:transform 1.1s cubic-bezier(.16,.7,.3,1); }
+  .pg-gal:hover .pg-gal-img{ transform:scale(1.06); }
+
+  /* ===== Hamburger / mobile menu ===== */
+  .pg-hamburger{ display:none; background:none; border:none; cursor:pointer; padding:8px 0; flex-direction:column; gap:6px; }
+  .pg-hamburger .hb{ display:block; width:24px; height:1.5px; background:#EFE6D8; border-radius:2px; transition:transform .3s ease, opacity .25s ease; }
+  .pg-mobile-menu{ position:fixed; inset:0; background:rgba(12,9,8,0.97); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); z-index:110; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; opacity:0; visibility:hidden; pointer-events:none; transition:opacity .38s cubic-bezier(.16,.7,.3,1), visibility .38s; }
+  .pg-mobile-menu.open{ opacity:1; visibility:visible; pointer-events:auto; }
+  .pg-mobile-menu .mm-link{ text-decoration:none; font-family:'Cormorant Garamond',serif; font-size:clamp(32px,9vw,42px); font-weight:500; color:#EFE6D8; letter-spacing:-0.01em; padding:9px 0; }
+  .pg-mobile-menu .mm-cta{ margin-top:26px; text-decoration:none; background:#7E2233; color:#EFE6D8 !important; padding:16px 34px; border-radius:999px; font-family:'Hanken Grotesk',sans-serif; font-size:14.5px; letter-spacing:.02em; font-weight:500; }
+  .pg-mobile-menu .mm-close{ position:absolute; top:22px; right:clamp(22px,5vw,72px); background:none; border:none; cursor:pointer; font-family:'Hanken Grotesk',sans-serif; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#9A8E7D; padding:10px; }
+
+  /* ===== scroll progress ===== */
+  #pg-progress{ position:fixed; top:0; left:0; height:2px; background:linear-gradient(90deg,#7E2233,#C9A24B,#D9BE86); z-index:115; width:0; transition:width .1s linear; pointer-events:none; }
+
+  [href^="mailto"]{ word-break:break-all; }
+
+  @media (prefers-reduced-motion:reduce){
+    .pg-breathe, #pgIntro .iris, #pgIntro .iris img, #pgIntro .ring, #pgIntro .chrome{ animation:none !important; }
+  }
+
+  @media (max-width:980px){
+    .pg-navlinks{ display:none !important; }
+    .pg-navcta{ display:none !important; }
+    .pg-hamburger{ display:flex; }
+    .pg-hero{ grid-template-columns:1fr !important; min-height:auto !important; }
+    .pg-hero-img{ min-height:64vh !important; order:-1; }
+    .pg-hero-text{ padding-top:clamp(96px,18vw,150px) !important; padding-bottom:60px !important; }
+    .pg-explore{ display:none !important; }
+    .pg-2col{ grid-template-columns:1fr !important; }
+    .pg-svc{ grid-template-columns:1fr !important; }
+    .pg-svc > *{ grid-column:auto !important; margin-top:0 !important; }
+    .pg-journey{ grid-template-columns:1fr 1fr !important; }
+    .pg-journey-line{ display:none !important; }
+    .pg-gallery{ grid-template-columns:1fr 1fr !important; }
+    .pg-gallery > *{ grid-column:auto !important; grid-row:auto !important; }
+    .pg-auth{ grid-template-columns:1fr 1fr !important; }
+  }
+  @media (max-width:560px){
+    .pg-gallery{ grid-template-columns:1fr !important; }
+    .pg-journey{ grid-template-columns:1fr !important; }
+    .pg-auth{ grid-template-columns:1fr !important; }
+  }
+</style>
+<noscript><style>#pgIntro{ display:none !important; } html.reveal-ready [data-reveal]{ opacity:1 !important; transform:none !important; }</style></noscript>
+</head>
+<body>
+<div style="background:#14100E; color:#EFE6D8; font-family:'Hanken Grotesk',system-ui,sans-serif; overflow-x:hidden; position:relative;">
+  <div class="pg-grain"></div>
+
+  <!-- ===== INTRO: lens iris opening into the site ===== -->
+  <div id="pgIntro" data-intro>
+    <div class="iris"><img src="assets/paula-camera-web.jpg" alt=""></div>
+    <div class="ring" style="width:15vmin; height:15vmin;"></div>
+    <div class="chrome">
+      <span style="position:absolute; left:38px; top:38px; width:30px; height:30px; border-left:1.5px solid rgba(239,230,216,.7); border-top:1.5px solid rgba(239,230,216,.7);"></span>
+      <span style="position:absolute; right:38px; top:38px; width:30px; height:30px; border-right:1.5px solid rgba(239,230,216,.7); border-top:1.5px solid rgba(239,230,216,.7);"></span>
+      <span style="position:absolute; left:38px; bottom:38px; width:30px; height:30px; border-left:1.5px solid rgba(239,230,216,.7); border-bottom:1.5px solid rgba(239,230,216,.7);"></span>
+      <span style="position:absolute; right:38px; bottom:38px; width:30px; height:30px; border-right:1.5px solid rgba(239,230,216,.7); border-bottom:1.5px solid rgba(239,230,216,.7);"></span>
+      <div style="position:absolute; left:42px; top:44px; display:flex; align-items:center; gap:10px; font-family:'Hanken Grotesk',monospace; font-size:12px; letter-spacing:.18em; color:rgba(239,230,216,.85);">
+        <span style="width:9px; height:9px; border-radius:50%; background:#C9202B; animation:pgBlink 1s steps(1) infinite;"></span>REC
+      </div>
+      <div style="position:absolute; right:42px; top:44px; font-family:'Hanken Grotesk',monospace; font-size:12px; letter-spacing:.16em; color:rgba(239,230,216,.85);">f/2.8 · 1/250 · ISO 400</div>
+      <div style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:54px; height:54px;">
+        <span style="position:absolute; left:50%; top:0; width:1px; height:14px; background:rgba(239,230,216,.8); transform:translateX(-50%);"></span>
+        <span style="position:absolute; left:50%; bottom:0; width:1px; height:14px; background:rgba(239,230,216,.8); transform:translateX(-50%);"></span>
+        <span style="position:absolute; top:50%; left:0; height:1px; width:14px; background:rgba(239,230,216,.8); transform:translateY(-50%);"></span>
+        <span style="position:absolute; top:50%; right:0; height:1px; width:14px; background:rgba(239,230,216,.8); transform:translateY(-50%);"></span>
+      </div>
+      <div style="position:absolute; left:50%; bottom:46px; transform:translateX(-50%); font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(16px,2vw,22px); color:rgba(239,230,216,.9); letter-spacing:.02em;">enquadrando o instante…</div>
+    </div>
+    <button data-skip style="position:absolute; right:38px; bottom:44px; z-index:2; background:transparent; border:1px solid rgba(239,230,216,.4); color:rgba(239,230,216,.85); font-family:'Hanken Grotesk',sans-serif; font-size:11px; letter-spacing:.2em; text-transform:uppercase; padding:9px 16px; border-radius:999px; cursor:pointer;">Pular</button>
+  </div>
+
+  <!-- ===== NAV ===== -->
+  <nav data-nav style="position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:18px clamp(22px,5vw,72px); border-bottom:1px solid rgba(201,162,75,0); transition:background .55s ease, backdrop-filter .55s ease, border-color .55s ease, padding .45s ease;">
+    <a href="#top" style="display:flex; align-items:center; gap:14px; text-decoration:none; color:inherit;">
+      <span style="display:flex; align-items:center; justify-content:center; width:42px; height:42px; border:1px solid rgba(201,162,75,.55); border-radius:50%; font-family:'Cormorant Garamond',serif; font-size:18px; letter-spacing:.02em; color:#D9BE86;">PG</span>
+      <span style="display:flex; flex-direction:column; line-height:1;">
+        <span style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:21px; letter-spacing:.06em; color:#EFE6D8;">Paula Guimarães</span>
+        <span style="font-size:9px; letter-spacing:.42em; text-transform:uppercase; color:#9A8E7D; margin-top:4px; font-weight:600;">Fotografia</span>
+      </span>
+    </a>
+    <div style="display:flex; align-items:center; gap:34px;">
+      <div class="pg-navlinks" style="display:flex; align-items:center; gap:30px;">
+        <a href="#paula" class="pg-navlink" style="text-decoration:none; color:#C9BEAD; font-size:13.5px; letter-spacing:.01em;">A Fotógrafa</a>
+        <a href="#olhar" class="pg-navlink" style="text-decoration:none; color:#C9BEAD; font-size:13.5px; letter-spacing:.01em;">O Olhar</a>
+        <a href="#ensaios" class="pg-navlink" style="text-decoration:none; color:#C9BEAD; font-size:13.5px; letter-spacing:.01em;">Ensaios</a>
+        <a href="#portfolio" class="pg-navlink" style="text-decoration:none; color:#C9BEAD; font-size:13.5px; letter-spacing:.01em;">Portfólio</a>
+        <a href="#experiencia" class="pg-navlink" style="text-decoration:none; color:#C9BEAD; font-size:13.5px; letter-spacing:.01em;">Experiência</a>
+      </div>
+      <a href="#contato" class="pg-navcta pg-btn-wine" style="text-decoration:none; padding:12px 22px; border-radius:999px; font-size:13px; letter-spacing:.02em; font-weight:500; white-space:nowrap;">Agendar ensaio</a>
+      <button class="pg-hamburger" id="pg-hb" aria-label="Abrir menu" aria-expanded="false">
+        <span class="hb"></span><span class="hb"></span><span class="hb"></span>
+      </button>
+    </div>
+  </nav>
+  <div class="pg-mobile-menu" id="pg-mm" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+    <button class="mm-close" id="pg-mm-close" aria-label="Fechar menu">Fechar</button>
+    <a href="#paula" class="mm-link">A Fotógrafa</a>
+    <a href="#olhar" class="mm-link">O Olhar</a>
+    <a href="#ensaios" class="mm-link">Ensaios</a>
+    <a href="#portfolio" class="mm-link">Portfólio</a>
+    <a href="#experiencia" class="mm-link">Experiência</a>
+    <a href="#contato" class="mm-cta">Agendar ensaio</a>
+  </div>
+
+  <!-- ===== 01 · HERO ===== -->
+  <header id="top" class="pg-hero" style="position:relative; display:grid; grid-template-columns:1.02fr 0.98fr; min-height:100vh; align-items:stretch;">
+    <div class="pg-hero-text" style="display:flex; flex-direction:column; justify-content:center; padding:150px clamp(24px,5vw,86px) 72px;">
+      <div data-reveal style="display:flex; align-items:center; gap:15px; margin-bottom:30px;">
+        <span style="width:46px; height:1px; background:linear-gradient(90deg,#C9A24B,rgba(201,162,75,0));"></span>
+        <span style="font-size:11.5px; letter-spacing:.34em; text-transform:uppercase; color:#9A8E7D; font-weight:600;">Fotografia autoral · Araguaína-TO</span>
+      </div>
+      <h1 data-reveal data-reveal-delay="0.08" style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(46px,6.6vw,104px); line-height:0.98; letter-spacing:-0.015em; color:#EFE6D8;">
+        Há um instante<br>que <span style="font-style:italic; color:#D9BE86;">só acontece<br>uma vez.</span>
+      </h1>
+      <p data-reveal data-reveal-delay="0.16" style="margin:36px 0 0; max-width:445px; font-size:clamp(16px,1.15vw,18.5px); line-height:1.72; color:#C9BEAD;">
+        Eu existo para guardá-lo. Retratos que revelam quem você é, com luz, presença e verdade.
+      </p>
+      <div data-reveal data-reveal-delay="0.24" style="display:flex; flex-wrap:wrap; align-items:center; gap:13px; margin-top:44px;">
+        <a href="#contato" class="pg-btn-wine" style="text-decoration:none; padding:17px 30px; border-radius:999px; font-size:14.5px; letter-spacing:.02em; font-weight:500;">Agendar um ensaio</a>
+        <a href="#portfolio" class="pg-btn-ghost" style="text-decoration:none; color:#EFE6D8; padding:17px 26px; border-radius:999px; border:1px solid rgba(239,230,216,0.24); font-size:14.5px; letter-spacing:.02em;">Ver portfólio</a>
+      </div>
+      <div data-reveal data-reveal-delay="0.32" style="display:flex; align-items:center; gap:20px; margin-top:66px; padding-top:26px; border-top:1px solid rgba(239,230,216,0.12);">
+        <span style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#C9BEAD;">Paula Guimarães</span>
+        <span style="width:5px; height:5px; border-radius:50%; background:#C9A24B;"></span>
+        <span style="font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#9A8E7D; font-weight:600;">Fotógrafa · Direção de imagem</span>
+      </div>
+    </div>
+
+    <div class="pg-hero-img" style="position:relative; overflow:hidden; background:#0C0908;">
+      <img src="assets/paula-camera-web.jpg" alt="Paula Guimarães" class="pg-breathe" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:34% 22%; filter:saturate(1.06) contrast(1.05) brightness(1.02); animation:pgBreathe 24s ease-in-out infinite alternate;">
+      <div style="position:absolute; inset:0; background:linear-gradient(150deg, rgba(20,16,14,0.0) 40%, rgba(126,34,51,0.18) 80%, rgba(12,9,8,0.45)); pointer-events:none;"></div>
+      <div style="position:absolute; inset:0; box-shadow:inset 0 0 160px rgba(12,9,8,0.5); pointer-events:none;"></div>
+      <div style="position:absolute; left:30px; bottom:34px; writing-mode:vertical-rl; transform:rotate(180deg);">
+        <span style="font-size:10.5px; letter-spacing:.42em; text-transform:uppercase; color:rgba(239,230,216,0.85); font-weight:600;">Portfólio · Edição 2026</span>
+      </div>
+      <div style="position:absolute; right:28px; top:124px; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2vw,30px); color:rgba(239,230,216,0.92); text-align:right; line-height:1.2;">luz,<br>presença<br>&amp; verdade</div>
+    </div>
+
+    <div class="pg-explore" style="position:absolute; left:50%; bottom:26px; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:7px; z-index:5;">
+      <span style="font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:#9A8E7D; font-weight:600;">Explorar</span>
+      <span style="width:1px; height:34px; background:linear-gradient(#C9A24B,transparent); animation:pgDrift 2.4s ease-in-out infinite alternate;"></span>
+    </div>
+  </header>
+
+  <!-- ===== 02 · A FOTÓGRAFA ===== -->
+  <section id="paula" style="scroll-margin-top:90px; padding:clamp(80px,11vw,160px) clamp(24px,5vw,86px);">
+    <div class="pg-2col" style="display:grid; grid-template-columns:0.82fr 1.18fr; gap:clamp(40px,6vw,90px); align-items:center; max-width:1280px; margin:0 auto;">
+      <div data-reveal style="position:relative;">
+        <div style="position:relative; overflow:hidden; border-radius:1000px 1000px 8px 8px; aspect-ratio:3/4; background:#0C0908;">
+          <img src="assets/paula-flores.jpg" alt="Paula Guimarães, fotógrafa" loading="lazy" class="pg-breathe" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:42% 18%; filter:saturate(1.05) contrast(1.04); animation:pgBreathe 27s ease-in-out infinite alternate;">
+          <div style="position:absolute; inset:0; background:linear-gradient(160deg, rgba(20,16,14,0.0), rgba(126,34,51,0.16)); pointer-events:none;"></div>
+        </div>
+        <div style="position:absolute; right:-10px; bottom:30px; background:#1E1714; border:1px solid rgba(201,162,75,.28); padding:16px 22px; border-radius:6px; box-shadow:0 24px 60px -28px rgba(0,0,0,0.7);">
+          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:24px; line-height:1; color:#EFE6D8;">Paula Guimarães</div>
+          <div style="font-size:10.5px; letter-spacing:.22em; text-transform:uppercase; color:#C9A24B; font-weight:600; margin-top:7px;">Fotógrafa autoral</div>
+        </div>
+      </div>
+
+      <div>
+        <div data-reveal style="display:flex; align-items:center; gap:14px; margin-bottom:26px;">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:15px; color:#C9A24B;">02</span>
+          <span style="font-size:11.5px; letter-spacing:.3em; text-transform:uppercase; color:#9A8E7D; font-weight:600;">A fotógrafa</span>
+        </div>
+        <h2 data-reveal data-reveal-delay="0.08" style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(34px,4.4vw,62px); line-height:1.04; letter-spacing:-0.01em; color:#EFE6D8;">
+          Quem fotografa você<br>deveria primeiro <span style="font-style:italic; color:#D9BE86;">enxergar<br>você.</span>
+        </h2>
+        <p data-reveal data-reveal-delay="0.14" style="margin:30px 0 0; max-width:560px; font-size:17px; line-height:1.78; color:#C9BEAD;">
+          A fotografia entrou na vida da Paula como um presente, e virou sua forma de eternizar histórias, sentimentos e momentos únicos. Antes da câmera, a conversa. Cada ensaio nasce da pessoa: seus gestos, sua história, a luz que combina com quem você é.
+        </p>
+        <p data-reveal data-reveal-delay="0.2" style="margin:18px 0 0; max-width:560px; font-size:17px; line-height:1.78; color:#C9BEAD;">
+          Mais do que registrar, ela conduz com carinho, sensibilidade e dedicação, para que o ensaio seja leve e a imagem, eterna.
+        </p>
+        <div data-reveal data-reveal-delay="0.26" style="display:flex; flex-wrap:wrap; gap:34px; margin-top:42px; padding-top:30px; border-top:1px solid rgba(239,230,216,0.12);">
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:23px; color:#EFE6D8;">Retrato &amp; Editorial</div>
+            <div style="font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#9A8E7D; font-weight:600; margin-top:6px;">Especialidade</div>
+          </div>
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:23px; color:#EFE6D8;">Estúdio em Araguaína</div>
+            <div style="font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#9A8E7D; font-weight:600; margin-top:6px;">Onde a luz pede</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 03 · O OLHAR (manifesto) ===== -->
+  <section id="olhar" style="scroll-margin-top:90px; background:#1E1714; padding:clamp(84px,11vw,164px) clamp(24px,5vw,86px); position:relative;">
+    <div style="max-width:1080px; margin:0 auto; text-align:center;">
+      <div data-reveal style="display:flex; align-items:center; justify-content:center; gap:14px; margin-bottom:34px;">
+        <span style="font-family:'Cormorant Garamond',serif; font-size:15px; color:#C9A24B;">03</span>
+        <span style="font-size:11.5px; letter-spacing:.3em; text-transform:uppercase; color:#9A8E7D; font-weight:600;">O olhar</span>
+      </div>
+      <p data-reveal data-reveal-delay="0.08" style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:400; font-style:italic; font-size:clamp(28px,4.2vw,58px); line-height:1.24; letter-spacing:-0.01em; color:#EFE6D8;">
+        “A fotografia não congela o tempo,<br>ela <span style="color:#D9BE86;">guarda</span> o que sentimos quando<br>ele passou rápido demais.”
+      </p>
+      <div data-reveal data-reveal-delay="0.16" style="display:flex; align-items:center; justify-content:center; gap:16px; margin-top:40px;">
+        <span style="width:40px; height:1px; background:rgba(201,162,75,.6);"></span>
+        <span style="font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:#9A8E7D; font-weight:600;">Paula Guimarães</span>
+        <span style="width:40px; height:1px; background:rgba(201,162,75,.6);"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 04 · ENSAIOS & SERVIÇOS ===== -->
+  <section id="ensaios" style="scroll-margin-top:90px; padding:clamp(80px,11vw,160px) clamp(24px,5vw,86px);">
+    <div style="max-width:1280px; margin:0 auto;">
+      <div class="pg-2col" style="display:grid; grid-template-columns:1fr 0.8fr; gap:40px; align-items:end; margin-bottom:clamp(50px,6vw,84px);">
+        <div>
+          <div data-reveal style="display:flex; align-items:center; gap:14px; margin-bottom:24px;">
+            <span style="font-family:'Cormorant Garamond',serif; font-size:15px; color:#C9A24B;">04</span>
+            <span style="font-size:11.5px; letter-spacing:.3em; text-transform:uppercase; color:#9A8E7D; font-weight:600;">Ensaios &amp; serviços</span>
+          </div>
+          <h2 data-reveal data-reveal-delay="0.08" style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(34px,4.6vw,64px); line-height:1.02; letter-spacing:-0.012em; color:#EFE6D8;">
+            Cada ensaio nasce<br>de uma <span style="font-style:italic; color:#D9BE86;">história diferente.</span>
+          </h2>
+        </div>
+        <p data-reveal data-reveal-delay="0.14" style="margin:0; font-size:16px; line-height:1.8; color:#C9BEAD;">
+          Não vendo pacotes prontos. Desenho cada experiência a partir do que você quer eternizar.
+        </p>
+      </div>
+
+      <div class="pg-svc" style="display:grid; grid-template-columns:repeat(12,1fr); column-gap:clamp(28px,4vw,64px); row-gap:clamp(44px,5vw,72px);">
+
+        <div data-reveal style="grid-column:span 7; padding-top:30px; border-top:1px solid rgba(239,230,216,0.16);">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:15px; color:#C9A24B; margin-bottom:14px;">01</div>
+          <h3 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3vw,40px); line-height:1.05; color:#EFE6D8;">Retrato autoral</h3>
+          <p style="margin:14px 0 0; max-width:430px; font-size:15.5px; line-height:1.72; color:#C9BEAD;">O ensaio que revela quem você é. Luz, direção e presença para uma imagem que dura, pessoal ou profissional.</p>
+        </div>
+
+        <div data-reveal data-reveal-delay="0.06" style="grid-column:span 5; padding-top:30px; margin-top:46px; border-top:1px solid rgba(239,230,216,0.16);">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:15px; color:#C9A24B; margin-bottom:14px;">02</div>
+          <h3 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3vw,40px); line-height:1.05; color:#EFE6D8;">Gestante &amp; newborn</h3>
+          <p style="margin:14px 0 0; max-width:360px; font-size:15.5px; line-height:1.72; color:#C9BEAD;">A espera e os primeiros dias. Ensaios delicados que guardam a fase mais única, com leveza e afeto.</p>
+        </div>
+
+        <div data-reveal style="grid-column:span 5; background:linear-gradient(155deg,#7E2233,#5A1623); border:1px solid rgba(201,162,75,.2); border-radius:8px; padding:clamp(28px,3vw,40px);">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:15px; color:#D9BE86; margin-bottom:14px;">03</div>
+          <h3 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3vw,40px); line-height:1.05; color:#EFE6D8;">Casamentos</h3>
+          <p style="margin:14px 0 0; font-size:15.5px; line-height:1.72; color:#EBD9D2;">O dia inteiro contado como ele merece, do detalhe ao olhar. Cobertura sensível, do antes ao último brinde.</p>
+          <span style="display:inline-block; margin-top:22px; font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:#D9BE86; font-weight:600;">Experiência completa</span>
+        </div>
+
+        <div data-reveal data-reveal-delay="0.06" style="grid-column:span 7; padding-top:30px; margin-top:40px; border-top:1px solid rgba(239,230,216,0.16);">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:15px; color:#C9A24B; margin-bottom:14px;">04</div>
+          <h3 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3vw,40px); line-height:1.05; color:#EFE6D8;">Família &amp; acompanhamento infantil</h3>
+          <p style="margin:14px 0 0; max-width:430px; font-size:15.5px; line-height:1.72; color:#C9BEAD;">O afeto que não volta. Ensaios espontâneos e o acompanhamento de cada fase da infância que você não quer esquecer.</p>
+        </div>
+
+        <div data-reveal style="grid-column:span 6; padding-top:30px; border-top:1px solid rgba(239,230,216,0.16);">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:15px; color:#C9A24B; margin-bottom:14px;">05</div>
+          <h3 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3vw,40px); line-height:1.05; color:#EFE6D8;">Editorial &amp; branding</h3>
+          <p style="margin:14px 0 0; max-width:430px; font-size:15.5px; line-height:1.72; color:#C9BEAD;">Conceito, styling e imagem profissional com identidade. Para marcas, criadores e projetos que querem ser vistos com elegância.</p>
+        </div>
+
+        <div data-reveal data-reveal-delay="0.06" style="grid-column:span 6; padding-top:30px; border-top:1px solid rgba(239,230,216,0.16);">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:15px; color:#C9A24B; margin-bottom:14px;">06</div>
+          <h3 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3vw,40px); line-height:1.05; color:#EFE6D8;">Eventos &amp; celebrações</h3>
+          <p style="margin:14px 0 0; max-width:430px; font-size:15.5px; line-height:1.72; color:#C9BEAD;">Aniversários, formaturas e momentos que merecem ser lembrados com a mesma beleza com que aconteceram.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 05 · PORTFÓLIO ===== -->
+  <section id="portfolio" style="scroll-margin-top:90px; background:#1E1714; padding:clamp(80px,11vw,160px) clamp(24px,5vw,86px);">
+    <div style="max-width:1320px; margin:0 auto;">
+      <div class="pg-2col" style="display:grid; grid-template-columns:1fr 0.8fr; gap:40px; align-items:end; margin-bottom:clamp(46px,6vw,72px);">
+        <div>
+          <div data-reveal style="display:flex; align-items:center; gap:14px; margin-bottom:24px;">
+            <span style="font-family:'Cormorant Garamond',serif; font-size:15px; color:#C9A24B;">05</span>
+            <span style="font-size:11.5px; letter-spacing:.3em; text-transform:uppercase; color:#9A8E7D; font-weight:600;">Portfólio selecionado</span>
+          </div>
+          <h2 data-reveal data-reveal-delay="0.08" style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(34px,4.6vw,64px); line-height:1.02; letter-spacing:-0.012em; color:#EFE6D8;">
+            Um recorte do<br><span style="font-style:italic; color:#D9BE86;">que já vivi por trás da lente.</span>
+          </h2>
+        </div>
+        <p data-reveal data-reveal-delay="0.14" style="margin:0; font-size:16px; line-height:1.8; color:#C9BEAD;">
+          Cada imagem aqui foi um encontro. Role para sentir o tom. A galeria completa abre na conversa.
+        </p>
+      </div>
+
+      <div class="pg-gallery" style="display:grid; grid-template-columns:repeat(6,1fr); grid-auto-rows:200px; gap:clamp(14px,1.4vw,20px);">
+        <div data-reveal class="pg-gal" style="grid-column:span 2; grid-row:span 2; position:relative; overflow:hidden; border-radius:6px; background:#0C0908;">
+          <img src="assets/retrato-01.jpg" alt="Retrato autoral em estúdio" loading="lazy" class="pg-gal-img" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 30%; filter:saturate(1.05) contrast(1.05);">
+          <div style="position:absolute; left:16px; bottom:14px; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(239,230,216,.92); font-weight:600;">Retrato · Autoral</div>
+        </div>
+        <div data-reveal data-reveal-delay="0.05" class="pg-gal" style="grid-column:span 2; grid-row:span 1; position:relative; overflow:hidden; border-radius:6px; background:#0C0908;">
+          <img src="assets/editorial.jpg" alt="Ensaio editorial" loading="lazy" class="pg-gal-img" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 28%; filter:saturate(1.05) contrast(1.05);">
+          <div style="position:absolute; left:16px; bottom:14px; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(239,230,216,.92); font-weight:600;">Editorial · Estúdio</div>
+        </div>
+        <div data-reveal data-reveal-delay="0.1" class="pg-gal" style="grid-column:span 2; grid-row:span 2; position:relative; overflow:hidden; border-radius:6px; background:#0C0908;">
+          <img src="assets/casamento.jpg" alt="Casamento" loading="lazy" class="pg-gal-img" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 42%; filter:saturate(1.05) contrast(1.05);">
+          <div style="position:absolute; left:16px; bottom:14px; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(239,230,216,.92); font-weight:600;">Casamento</div>
+        </div>
+        <div data-reveal data-reveal-delay="0.05" class="pg-gal" style="grid-column:span 2; grid-row:span 1; position:relative; overflow:hidden; border-radius:6px; background:#0C0908;">
+          <img src="assets/newborn.jpg" alt="Ensaio newborn" loading="lazy" class="pg-gal-img" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 42%; filter:saturate(1.05) contrast(1.05);">
+          <div style="position:absolute; left:16px; bottom:14px; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(239,230,216,.92); font-weight:600;">Newborn</div>
+        </div>
+        <div data-reveal class="pg-gal" style="grid-column:span 2; grid-row:span 2; position:relative; overflow:hidden; border-radius:6px; background:#0C0908;">
+          <img src="assets/gestante.jpg" alt="Ensaio gestante" loading="lazy" class="pg-gal-img" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:55% 22%; filter:saturate(1.05) contrast(1.05);">
+          <div style="position:absolute; left:16px; bottom:14px; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(239,230,216,.92); font-weight:600;">Gestante</div>
+        </div>
+        <div data-reveal data-reveal-delay="0.05" class="pg-gal" style="grid-column:span 2; grid-row:span 2; position:relative; overflow:hidden; border-radius:6px; background:#0C0908;">
+          <img src="assets/paula-camera-web.jpg" alt="Por trás da lente" loading="lazy" class="pg-gal-img" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:34% 22%; filter:saturate(1.05) contrast(1.05) brightness(.98);">
+          <div style="position:absolute; left:16px; bottom:14px; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(239,230,216,.92); font-weight:600;">Por trás da lente</div>
+        </div>
+        <div data-reveal data-reveal-delay="0.1" class="pg-gal" style="grid-column:span 2; grid-row:span 1; position:relative; overflow:hidden; border-radius:6px; background:#0C0908;">
+          <img src="assets/paula-flores.jpg" alt="Ensaio em estúdio" loading="lazy" class="pg-gal-img" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:40% 20%; filter:saturate(1.05) contrast(1.05);">
+          <div style="position:absolute; left:16px; bottom:14px; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(239,230,216,.92); font-weight:600;">Estúdio</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 06 · A EXPERIÊNCIA ===== -->
+  <section id="experiencia" style="scroll-margin-top:90px; padding:clamp(80px,11vw,160px) clamp(24px,5vw,86px);">
+    <div style="max-width:1280px; margin:0 auto;">
+      <div data-reveal style="display:flex; align-items:center; gap:14px; margin-bottom:24px;">
+        <span style="font-family:'Cormorant Garamond',serif; font-size:15px; color:#C9A24B;">06</span>
+        <span style="font-size:11.5px; letter-spacing:.3em; text-transform:uppercase; color:#9A8E7D; font-weight:600;">A experiência</span>
+      </div>
+      <h2 data-reveal data-reveal-delay="0.08" style="margin:0 0 clamp(54px,6vw,84px); font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(34px,4.6vw,64px); line-height:1.02; letter-spacing:-0.012em; max-width:20ch; color:#EFE6D8;">
+        Do primeiro oi à entrega, <span style="font-style:italic; color:#D9BE86;">você é conduzido</span> com cuidado.
+      </h2>
+
+      <div style="position:relative;">
+        <div class="pg-journey-line" style="position:absolute; top:8px; left:0; right:0; height:1px; background:linear-gradient(90deg,rgba(201,162,75,.2),#C9A24B,rgba(201,162,75,.2));"></div>
+        <div class="pg-journey" style="display:grid; grid-template-columns:repeat(6,1fr); gap:30px;">
+          <div data-reveal style="position:relative;">
+            <span style="display:block; width:15px; height:15px; border-radius:50%; background:#C9A24B; box-shadow:0 0 0 4px #14100E; margin-bottom:26px;"></span>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#9A8E7D; margin-bottom:8px;">Etapa 01</div>
+            <h3 style="margin:0 0 10px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:25px; color:#EFE6D8;">Conversa</h3>
+            <p style="margin:0; font-size:13.5px; line-height:1.6; color:#A89B8C;">Entendo seu desejo, sua referência e o que você quer eternizar.</p>
+          </div>
+          <div data-reveal data-reveal-delay="0.05" style="position:relative;">
+            <span style="display:block; width:15px; height:15px; border-radius:50%; background:#C9A24B; box-shadow:0 0 0 4px #14100E; margin-bottom:26px;"></span>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#9A8E7D; margin-bottom:8px;">Etapa 02</div>
+            <h3 style="margin:0 0 10px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:25px; color:#EFE6D8;">Conceito</h3>
+            <p style="margin:0; font-size:13.5px; line-height:1.6; color:#A89B8C;">Criamos juntos o clima: locação, styling, luz e referências.</p>
+          </div>
+          <div data-reveal data-reveal-delay="0.1" style="position:relative;">
+            <span style="display:block; width:15px; height:15px; border-radius:50%; background:#C9A24B; box-shadow:0 0 0 4px #14100E; margin-bottom:26px;"></span>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#9A8E7D; margin-bottom:8px;">Etapa 03</div>
+            <h3 style="margin:0 0 10px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:25px; color:#EFE6D8;">Ensaio</h3>
+            <p style="margin:0; font-size:13.5px; line-height:1.6; color:#A89B8C;">No dia, eu conduzo cada pose. Você só precisa estar presente.</p>
+          </div>
+          <div data-reveal data-reveal-delay="0.15" style="position:relative;">
+            <span style="display:block; width:15px; height:15px; border-radius:50%; background:#C9A24B; box-shadow:0 0 0 4px #14100E; margin-bottom:26px;"></span>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#9A8E7D; margin-bottom:8px;">Etapa 04</div>
+            <h3 style="margin:0 0 10px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:25px; color:#EFE6D8;">Seleção</h3>
+            <p style="margin:0; font-size:13.5px; line-height:1.6; color:#A89B8C;">Escolhemos juntos as imagens que mais traduzem o momento.</p>
+          </div>
+          <div data-reveal data-reveal-delay="0.2" style="position:relative;">
+            <span style="display:block; width:15px; height:15px; border-radius:50%; background:#C9A24B; box-shadow:0 0 0 4px #14100E; margin-bottom:26px;"></span>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#9A8E7D; margin-bottom:8px;">Etapa 05</div>
+            <h3 style="margin:0 0 10px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:25px; color:#EFE6D8;">Tratamento</h3>
+            <p style="margin:0; font-size:13.5px; line-height:1.6; color:#A89B8C;">Edição artística cuidadosa, respeitando a sua naturalidade.</p>
+          </div>
+          <div data-reveal data-reveal-delay="0.25" style="position:relative;">
+            <span style="display:block; width:15px; height:15px; border-radius:50%; background:#C9A24B; box-shadow:0 0 0 4px #14100E; margin-bottom:26px;"></span>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#9A8E7D; margin-bottom:8px;">Etapa 06</div>
+            <h3 style="margin:0 0 10px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:25px; color:#EFE6D8;">Entrega</h3>
+            <p style="margin:0; font-size:13.5px; line-height:1.6; color:#A89B8C;">Galeria final em alta, pronta para guardar e compartilhar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 07 · AUTORIDADE ===== -->
+  <section id="autoridade" style="scroll-margin-top:90px; background:#1E1714; padding:clamp(72px,9vw,128px) clamp(24px,5vw,86px);">
+    <div style="max-width:1280px; margin:0 auto;">
+      <h2 data-reveal style="margin:0 0 clamp(44px,5vw,68px); max-width:22ch; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3.6vw,50px); line-height:1.08; letter-spacing:-0.01em; color:#EFE6D8;">
+        Sensibilidade autoral, direção de imagem e um cuidado que <span style="font-style:italic; color:#D9BE86;">atravessa cada ensaio.</span>
+      </h2>
+      <div class="pg-auth" style="display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(28px,4vw,56px);">
+        <div data-reveal style="padding-top:24px; border-top:1px solid rgba(201,162,75,0.3);">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:clamp(26px,2.6vw,34px); line-height:1.05; color:#EFE6D8;">Retrato &amp; editorial</div>
+          <div style="font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#9A8E7D; font-weight:600; margin-top:10px;">Assinatura visual</div>
+        </div>
+        <div data-reveal data-reveal-delay="0.06" style="padding-top:24px; border-top:1px solid rgba(201,162,75,0.3);">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:clamp(26px,2.6vw,34px); line-height:1.05; color:#EFE6D8;">Estúdio em Araguaína</div>
+          <div style="font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#9A8E7D; font-weight:600; margin-top:10px;">Onde a luz pede</div>
+        </div>
+        <div data-reveal data-reveal-delay="0.12" style="padding-top:24px; border-top:1px solid rgba(201,162,75,0.3);">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:clamp(26px,2.6vw,34px); line-height:1.05; color:#EFE6D8;">Direção no ensaio</div>
+          <div style="font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#9A8E7D; font-weight:600; margin-top:10px;">Você guiado o tempo todo</div>
+        </div>
+        <div data-reveal data-reveal-delay="0.18" style="padding-top:24px; border-top:1px solid rgba(201,162,75,0.3);">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:clamp(26px,2.6vw,34px); line-height:1.05; color:#EFE6D8;">Edição artística</div>
+          <div style="font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#9A8E7D; font-weight:600; margin-top:10px;">Tratamento autoral</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 08 · CTA ===== -->
+  <section id="contato" style="scroll-margin-top:90px; padding:clamp(80px,12vw,170px) clamp(24px,5vw,86px);">
+    <div class="pg-2col" style="display:grid; grid-template-columns:1.2fr 0.8fr; gap:clamp(40px,6vw,90px); align-items:center; max-width:1180px; margin:0 auto;">
+      <div>
+        <div data-reveal style="display:flex; align-items:center; gap:15px; margin-bottom:28px;">
+          <span style="width:46px; height:1px; background:linear-gradient(90deg,#C9A24B,rgba(201,162,75,0));"></span>
+          <span style="font-size:11.5px; letter-spacing:.3em; text-transform:uppercase; color:#9A8E7D; font-weight:600;">Vamos criar juntos</span>
+        </div>
+        <h2 data-reveal data-reveal-delay="0.08" style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(40px,5.6vw,82px); line-height:1.0; letter-spacing:-0.015em; color:#EFE6D8;">
+          Que instante você quer <span style="font-style:italic; color:#D9BE86;">guardar para sempre?</span>
+        </h2>
+        <p data-reveal data-reveal-delay="0.14" style="margin:30px 0 0; max-width:480px; font-size:17.5px; line-height:1.74; color:#C9BEAD;">
+          Me conte sua ideia. A primeira conversa é leve, sem compromisso, e o começo de um ensaio que vai ficar.
+        </p>
+        <div data-reveal data-reveal-delay="0.2" style="display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin-top:42px;">
+          <a href="https://wa.me/5563999719869" target="_blank" rel="noopener" class="pg-btn-wine" style="text-decoration:none; display:inline-flex; align-items:center; gap:11px; padding:18px 32px; border-radius:999px; font-size:15px; letter-spacing:.02em; font-weight:500;">
+            <span style="width:8px; height:8px; border-radius:50%; background:#D9BE86;"></span>
+            Falar no WhatsApp
+          </a>
+          <span style="font-size:13px; color:#9A8E7D;">Resposta no mesmo dia.</span>
+        </div>
+        <div data-reveal data-reveal-delay="0.26" style="display:flex; flex-wrap:wrap; gap:30px; margin-top:42px; padding-top:28px; border-top:1px solid rgba(239,230,216,0.12);">
+          <div>
+            <div style="font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#9A8E7D; font-weight:600; margin-bottom:7px;">WhatsApp</div>
+            <a href="https://wa.me/5563999719869" target="_blank" rel="noopener" style="text-decoration:none; font-family:'Cormorant Garamond',serif; font-size:21px; color:#EFE6D8;">(63) 9 9971-9869</a>
+          </div>
+          <div>
+            <div style="font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#9A8E7D; font-weight:600; margin-bottom:7px;">Instagram</div>
+            <a href="https://instagram.com/paulaguimaraes.fotografias" target="_blank" rel="noopener" style="text-decoration:none; font-family:'Cormorant Garamond',serif; font-size:21px; color:#EFE6D8;">@paulaguimaraes.fotografias</a>
+          </div>
+          <div>
+            <div style="font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#9A8E7D; font-weight:600; margin-bottom:7px;">E-mail</div>
+            <a href="mailto:paulag.fotografia@gmail.com" style="text-decoration:none; font-family:'Cormorant Garamond',serif; font-size:21px; color:#EFE6D8;">paulag.fotografia@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div data-reveal data-reveal-delay="0.12" style="position:relative; overflow:hidden; border-radius:1000px 1000px 8px 8px; aspect-ratio:3/4; background:#0C0908;">
+        <img src="assets/editorial.jpg" alt="Ensaio de Paula Guimarães" loading="lazy" class="pg-breathe" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 26%; filter:saturate(1.05) contrast(1.04); animation:pgBreathe 26s ease-in-out infinite alternate;">
+        <div style="position:absolute; inset:0; background:linear-gradient(160deg, rgba(20,16,14,0.0), rgba(126,34,51,0.18)); pointer-events:none;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="background:#0C0908; color:#C9BEAD; padding:clamp(56px,7vw,88px) clamp(24px,5vw,86px) 40px;">
+    <div style="max-width:1280px; margin:0 auto;">
+      <div class="pg-2col" style="display:grid; grid-template-columns:1.3fr 1fr; gap:48px; padding-bottom:46px; border-bottom:1px solid rgba(239,230,216,0.12);">
+        <div>
+          <div style="display:flex; align-items:center; gap:14px;">
+            <span style="display:flex; align-items:center; justify-content:center; width:44px; height:44px; border:1px solid rgba(201,162,75,.55); border-radius:50%; font-family:'Cormorant Garamond',serif; font-size:19px; color:#D9BE86;">PG</span>
+            <span style="display:flex; flex-direction:column; line-height:1;">
+              <span style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:22px; letter-spacing:.05em; color:#EFE6D8;">Paula Guimarães</span>
+              <span style="font-size:9px; letter-spacing:.42em; text-transform:uppercase; color:#9A8E7D; margin-top:4px; font-weight:600;">Fotografia</span>
+            </span>
+          </div>
+          <p style="margin:24px 0 0; max-width:380px; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:21px; line-height:1.4; color:#D9C6B0;">
+            Há um instante que só acontece uma vez. Eu existo para guardá-lo.
+          </p>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:40px;">
+          <div>
+            <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#9A8E7D; font-weight:600; margin-bottom:14px;">Contato</div>
+            <a href="https://wa.me/5563999719869" target="_blank" rel="noopener" style="display:block; text-decoration:none; color:#D9C6B0; font-size:14.5px; margin-bottom:8px;">WhatsApp · (63) 9 9971-9869</a>
+            <a href="https://instagram.com/paulaguimaraes.fotografias" target="_blank" rel="noopener" style="display:block; text-decoration:none; color:#D9C6B0; font-size:14.5px; margin-bottom:8px;">@paulaguimaraes.fotografias</a>
+            <a href="mailto:paulag.fotografia@gmail.com" style="display:block; text-decoration:none; color:#D9C6B0; font-size:14.5px;">paulag.fotografia@gmail.com</a>
+          </div>
+          <div>
+            <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#9A8E7D; font-weight:600; margin-bottom:14px;">Estúdio</div>
+            <div style="font-size:14.5px; color:#D9C6B0; line-height:1.7;">Rua Rodoviária, 201, Centro<br>Araguaína · Tocantins<br>Atendimento sob agendamento</div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; padding-top:26px; font-size:12.5px; color:#7E7466;">
+        <span>© 2026 Paula Guimarães Fotografia. Todos os direitos reservados.</span>
+        <span style="letter-spacing:.06em;">Retrato · Gestante · Newborn · Família · Casamentos</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- Intro: lens-iris opening, then remove ---- */
+  var intro = document.querySelector('[data-intro]');
+  function removeIntro(){
+    if (intro && intro.parentNode) {
+      intro.style.transition = 'opacity .5s ease';
+      intro.style.opacity = '0';
+      intro.style.pointerEvents = 'none';
+      setTimeout(function(){ if (intro && intro.parentNode) intro.parentNode.removeChild(intro); }, 520);
+    }
+  }
+  var introTimer = null;
+  if (intro) {
+    if (reduce) {
+      intro.parentNode && intro.parentNode.removeChild(intro);
+    } else {
+      introTimer = setTimeout(removeIntro, 3500);
+      var skip = intro.querySelector('[data-skip]');
+      if (skip) skip.addEventListener('click', function(){ clearTimeout(introTimer); removeIntro(); });
+    }
+  }
+
+  /* ---- Scroll reveals ---- */
+  var els = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+  els.forEach(function(el){
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(26px)';
+    el.style.transition = 'opacity 1s cubic-bezier(.16,.7,.3,1), transform 1.05s cubic-bezier(.16,.7,.3,1)';
+    el.style.willChange = 'opacity, transform';
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          var el = entry.target;
+          var delay = parseFloat(el.getAttribute('data-reveal-delay') || '0');
+          el.style.transitionDelay = delay + 's';
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+          io.unobserve(el);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function(el){ io.observe(el); });
+  } else {
+    els.forEach(function(el){ el.style.opacity = '1'; el.style.transform = 'none'; });
+  }
+
+  /* ---- Nav scroll state ---- */
+  var nav = document.querySelector('[data-nav]');
+  var onScroll = function(){
+    if (!nav) return;
+    if (window.scrollY > 36) {
+      nav.style.background = 'rgba(12,9,8,0.82)';
+      nav.style.backdropFilter = 'blur(14px) saturate(1.3)';
+      nav.style.webkitBackdropFilter = 'blur(14px) saturate(1.3)';
+      nav.style.borderBottomColor = 'rgba(201,162,75,0.18)';
+      nav.style.paddingTop = '12px';
+      nav.style.paddingBottom = '12px';
+    } else {
+      nav.style.background = 'rgba(12,9,8,0)';
+      nav.style.backdropFilter = 'none';
+      nav.style.webkitBackdropFilter = 'none';
+      nav.style.borderBottomColor = 'rgba(201,162,75,0)';
+      nav.style.paddingTop = '18px';
+      nav.style.paddingBottom = '18px';
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---- Scroll progress bar ---- */
+  var prog = document.createElement('div');
+  prog.id = 'pg-progress';
+  document.body.appendChild(prog);
+  window.addEventListener('scroll', function(){
+    var top = window.scrollY;
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    prog.style.width = (h > 0 ? (top / h * 100) : 0) + '%';
+  }, { passive: true });
+
+  /* ---- Hamburger / mobile menu ---- */
+  var hb = document.getElementById('pg-hb');
+  var mm = document.getElementById('pg-mm');
+  var mmClose = document.getElementById('pg-mm-close');
+  function openMenu(){ if(!mm||!hb) return; mm.classList.add('open'); hb.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+  function closeMenu(){ if(!mm||!hb) return; mm.classList.remove('open'); hb.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  if(hb){ hb.addEventListener('click', openMenu); }
+  if(mmClose){ mmClose.addEventListener('click', closeMenu); }
+  if(mm){ mm.querySelectorAll('.mm-link,.mm-cta').forEach(function(a){ a.addEventListener('click', closeMenu); }); }
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeMenu(); } });
+})();
+</script>
+</body>
+</html>

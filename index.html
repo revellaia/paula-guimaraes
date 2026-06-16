@@ -90,7 +90,8 @@
   [href^="mailto"]{ word-break:break-all; }
 
   @media (prefers-reduced-motion:reduce){
-    .pg-breathe, #pgIntro .iris, #pgIntro .iris img, #pgIntro .ring, #pgIntro .chrome{ animation:none !important; }
+    /* o intro de lente toca em todos os dispositivos; aqui só desligamos o "breathing" continuo das fotos */
+    .pg-breathe{ animation:none !important; }
   }
 
   @media (max-width:980px){
@@ -556,9 +557,7 @@
 
 <script>
 (function(){
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* ---- Intro: lens-iris opening, then remove ---- */
+  /* ---- Intro: lens-iris opening, then remove (toca em TODOS os dispositivos) ---- */
   var intro = document.querySelector('[data-intro]');
   function removeIntro(){
     if (intro && intro.parentNode) {
@@ -570,13 +569,9 @@
   }
   var introTimer = null;
   if (intro) {
-    if (reduce) {
-      intro.parentNode && intro.parentNode.removeChild(intro);
-    } else {
-      introTimer = setTimeout(removeIntro, 3500);
-      var skip = intro.querySelector('[data-skip]');
-      if (skip) skip.addEventListener('click', function(){ clearTimeout(introTimer); removeIntro(); });
-    }
+    introTimer = setTimeout(removeIntro, 3500);
+    var skip = intro.querySelector('[data-skip]');
+    if (skip) skip.addEventListener('click', function(){ clearTimeout(introTimer); removeIntro(); });
   }
 
   /* ---- Scroll reveals ---- */

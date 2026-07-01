@@ -104,7 +104,8 @@ Pedido literal do cliente: *"um loop que abre dentro da imagem para dentro do si
 | Arquivo | Onde aparece | Origem |
 |---|---|---|
 | `paula-camera-web.jpg` | Intro (íris), galeria "Por trás da lente" | Foto principal otimizada (Paula com câmera) |
-| `paula-flores.jpg` | Seção 02 "A Fotógrafa", galeria "Estúdio" | Paula com buquê (PDF pág. 13) |
+| `paula-retrato.jpg` | Seção 02 "A Fotógrafa" (retrato principal) | Paula, top branco, mão no queixo (raw `A Fotografa.png`) |
+| `paula-flores.jpg` | Galeria "Estúdio" | Paula com buquê (PDF pág. 13) |
 | `editorial.jpg` | Hero (lado direito), galeria "Editorial" | Retrato editorial (PDF) |
 | `retrato-01.jpg` | Galeria "Retrato · Autoral" | Retrato preto (PDF pág. 0) |
 | `casamento.jpg` | Galeria "Casamento" | Casal (PDF) |

@@ -1,4 +1,4 @@
-# Paula Guimarães Fotografia — Documento-mãe do site
+# Paula Guimarães Fotografia · Documento-mãe do site
 
 > Fonte única de verdade para futuras atualizações. Sempre que mexer no site, leia este arquivo primeiro.
 
@@ -31,7 +31,7 @@
 
 A credencial do GitHub já está salva no Git Credential Manager (conta `revellaia`), o push autentica sozinho.
 
-**Regra de ouro:** nunca usar travessão (—) em nenhum texto. Usar vírgula, ponto ou dois-pontos.
+**Regra de ouro:** nunca usar travessão longo (em-dash) em nenhum texto. Usar vírgula, ponto ou dois-pontos.
 
 ---
 
@@ -76,7 +76,7 @@ Usar dourado com parcimônia (fios de 1px, numeração, pontos, contornos). O ú
 | 02 | `#paula` | A Fotógrafa | noir |
 | 03 | `#olhar` | O Olhar (manifesto centralizado) | noir-2 |
 | 04 | `#ensaios` | Ensaios & Serviços (6 blocos assimétricos) | noir |
-| 05 | `#portfolio` | Portfólio (galeria mosaico) | noir-2 |
+| 05 | `#portfolio` | Portfólio (galeria por categoria + álbum lightbox) | noir-2 |
 | 06 | `#experiencia` | A Experiência (jornada 6 etapas) | noir |
 | 07 | `#autoridade` | Autoridade (4 colunas) | noir-2 |
 | 08 | `#contato` | CTA WhatsApp | noir |
@@ -94,31 +94,36 @@ Pedido literal do cliente: *"um loop que abre dentro da imagem para dentro do si
 - Anel dourado (`.ring`) cresce de `15vmin` a `230vmin` e some.
 - Chrome de visor (`.chrome`): cantoneiras nos 4 cantos, "● REC" piscando, readout `f/2.8 · 1/250 · ISO 400`, mira de foco central, legenda "enquadrando o instante…".
 - Botão "Pular" remove na hora. JS remove tudo após 3500ms.
-- `prefers-reduced-motion: reduce` → intro some imediatamente, sem animação.
+- `prefers-reduced-motion: reduce`: a intro de lente TOCA em todos os dispositivos (pedido explícito do cliente); só o "breathing" contínuo das fotos é desligado.
 - Fundo `#0C0908` por trás do clip = mesmo near-black da foto, costura perfeita.
 
 ---
 
 ## 6. Mapa de imagens (assets/)
 
+Imagens fixas (fora do portfólio):
 | Arquivo | Onde aparece | Origem |
 |---|---|---|
-| `paula-camera-web.jpg` | Intro (íris), galeria "Por trás da lente" | Foto principal otimizada (Paula com câmera) |
-| `paula-retrato.jpg` | Seção 02 "A Fotógrafa" (retrato principal) | Paula, top branco, mão no queixo (raw `A Fotografa.png`) |
-| `paula-flores.jpg` | Galeria "Estúdio" | Paula com buquê (PDF pág. 13) |
-| `editorial.jpg` | Hero (lado direito), galeria "Editorial" | Retrato editorial (PDF) |
-| `retrato-01.jpg` | Galeria "Retrato · Autoral" | Retrato preto (PDF pág. 0) |
-| `casamento.jpg` | Galeria "Casamento" | Casal (PDF) |
-| `gestante.jpg` | Galeria "Gestante" | Ensaio gestante recortado (PDF pág. 4) |
-| `newborn.jpg` | Galeria "Newborn" | Bebê com ursinho (PDF pág. 19) |
+| `paula-camera-web.jpg` | Intro (íris) + Hero | Paula com câmera (handoff) |
+| `paula-retrato.jpg` | Seção 02 "A Fotógrafa" | Paula, top branco, mão no queixo (raw `A Fotografa.png`) |
+| `editorial.jpg` | CTA (seção 08) | Retrato editorial (PDF) |
 
-Todas extraídas do **PDF catálogo da Paula** (`Paula Guimaraes.pdf`, 22 páginas) via PyMuPDF.
-Original em alta `paula-camera.jpg` (4160×6240, 11MB) e o PDF ficam só no Google Drive (não versionados por peso).
+Portfólio (Seção 05), em `assets/portfolio/<slug>/NN.jpg`, extraído do acervo real do cliente (`raw06_stitch_premium/Paula Guimarães/Fotos Paula Guimarães/`) via Pillow (máx 1600px, q82 progressivo):
+| Slug | Categoria (site) | Pasta de origem | Fotos |
+|---|---|---|---|
+| retrato | Retrato Autoral | Posicionamento Profissional | 7 |
+| 15anos | Debutante · 15 Anos | 15 Anos | 4 |
+| gestante | Gestante | Gestante | 19 |
+| newborn | Newborn | New Born | 7 |
+| familia | Família | Familia | 4 |
+| infantil | Acompanhamento Infantil | Acompanhamento Infantil | 2 |
+| casamento | Casamento · Making Off | Making Off Casamento | 4 |
+| eventos | Eventos e Celebrações | Eventos de Inauguração | 5 |
 
 ### Como adicionar/trocar fotos do portfólio
-1. Coloque o `.jpg` otimizado em `assets/` (largura ~1400px, qualidade ~84, progressivo).
-2. No `index.html`, dentro de `.pg-gallery`, troque o `src` da moldura desejada e ajuste `object-position` para enquadrar o rosto/assunto.
-3. Para variar Hero / A Fotógrafa / CTA, troque o `src` da `<img>` da seção correspondente.
+1. Otimize as fotos (máx 1600px, q82 progressivo) e coloque em `assets/portfolio/<slug>/`, nomeadas `01.jpg, 02.jpg, ...` em sequência (a `01.jpg` é a capa).
+2. Se a contagem mudar, atualize `albumCounts` no JS e o texto "Ver álbum · N fotos" do card em `index.html`.
+3. Textos e nomes dos álbuns ficam no `<script id="pg-albums">` (JSON). Para nova categoria: adicione um card `.pg-cat` com `data-album="i"` e um objeto no JSON, na mesma ordem.
 4. Commit + push.
 
 ---
@@ -142,10 +147,10 @@ Bio oficial (do material): *"A fotografia entrou na minha vida como um presente 
 ## 8. Origem do design (handoff do cliente)
 
 Google Drive (pasta `1nGSU68ewAF35DXJUdpjC1zaeP9DzMzlb`):
-- `Paula Guimaraes/design_handoff_paula_home/README.md` — tokens, escala, interações (alta fidelidade).
-- `.../Paula Guimarães.dc.html` — protótipo (runtime proprietário `x-dc`). **Foi a fonte da verdade**, convertido para HTML/CSS/JS standalone neste `index.html`.
-- `.../assets/` — imagens otimizadas + original.
-- `Paula Guimaraes.pdf` — catálogo de marca + portfólio (fotos extraídas).
+- `Paula Guimaraes/design_handoff_paula_home/README.md` · tokens, escala, interações (alta fidelidade).
+- `.../Paula Guimarães.dc.html` · protótipo (runtime proprietário `x-dc`). **Foi a fonte da verdade**, convertido para HTML/CSS/JS standalone neste `index.html`.
+- `.../assets/` · imagens otimizadas + original.
+- `Paula Guimaraes.pdf` · catálogo de marca + portfólio (fotos extraídas).
 
 ---
 
@@ -154,8 +159,9 @@ Google Drive (pasta `1nGSU68ewAF35DXJUdpjC1zaeP9DzMzlb`):
 - [ ] Confirmar o WhatsApp principal com a Paula (usado: 5563999719869).
 - [ ] Receber mais fotos variadas do portfólio (hoje usamos o acervo do catálogo).
 - [ ] Logo oficial (hoje é monograma tipográfico "PG"); se houver logotipo, substituir.
-- [ ] Domínio próprio (ex: paulaguimaraes.com.br) + CNAME, se o cliente quiser sair do github.io.
-- [ ] Galeria completa / lightbox ao clicar nas fotos (atualmente abre "na conversa").
+- [~] Domínio `paulaguimaraess.com.br`: estratégia DNS-first em andamento (ver `docs/DOMINIO-SETUP.md`).
+- [x] Galeria por categoria com álbum lightbox + slider e modal "Agendar ensaio" (feito).
+- [ ] Pré-Wedding: há texto e opção no formulário, mas ainda sem pasta de fotos para virar álbum.
 
 ---
 

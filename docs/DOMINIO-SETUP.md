@@ -61,10 +61,13 @@ nslookup paulaguimaraess.com.br
 
 ---
 
-## Estado atual
+## Estado atual (CONCLUÍDO em 2026-07-01)
 
 - [x] Estratégia definida: DNS-first (sem downtime).
 - [x] Registros de DNS documentados (este arquivo).
-- [ ] Registros aplicados no registro.br (ação do cliente).
-- [ ] `CNAME` criado + custom domain configurado no GitHub (após DNS).
-- [ ] Enforce HTTPS habilitado.
+- [x] Registros aplicados no registro.br (apex A 185.199.108-111.153; www CNAME revellaia.github.io) e propagados.
+- [x] `CNAME` criado (`paulaguimaraess.com.br`) + custom domain configurado no GitHub Pages.
+- [x] Certificado Let's Encrypt emitido e **Enforce HTTPS habilitado**.
+
+Site no ar em **https://paulaguimaraess.com.br** (www redireciona para o apex).
+O `revellaia.github.io/paula-guimaraes` passa a redirecionar para o domínio.
